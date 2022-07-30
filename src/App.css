@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: lightblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.App{
+    width: 880px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.post {
+    display: flex;
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background: lightgreen;
+}
+
+.post-enter {
+    opacity: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .post-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
   }
-  to {
-    transform: rotate(360deg);
+  .post-exit {
+    opacity: 1;
   }
-}
+  .post-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
+
+  .page_wrapper{
+    margin-top: 30px;
+    display: flex;
+  }
+
+  .page{
+    padding: 10px;
+    border: 1px solid teal;
+    cursor: pointer;
+  }
+
+  .page__current {
+    border:2px solid goldenrod;
+    font-weight: bold;
+  }
+
+  .navbar{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: #123;
+    color: azure;
+    justify-content: space-around;
+  
+  }
+  .navbar__links{
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+
+  }
+  .post__btns{
+    display: flex;
+  }
