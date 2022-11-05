@@ -13,11 +13,14 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-    <MyButton
+    {
+      isAuth?<MyButton
     onClick = {logout}
     >
         Выйти 
-    </MyButton>
+    </MyButton>:null
+    }
+   
     <div className='navbar__links'>
     <Link to='/posts'>Посты</Link>
     <Link to='/about'>О сайте</Link>
